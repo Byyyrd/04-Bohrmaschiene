@@ -66,6 +66,25 @@ public class DrillingMachine {
     public double getPricePerWatt(){
         return price/watt;
     }
+    public boolean increasePriceByPercentage(double percentage){
+        if(percentage > 0.0){
+            this.price += price * percentage;
+        }
+        if (this.price > 100){
+            return true;
+        }
+        return false;
+    }
+    public boolean repair2(){
+        if(this.broken){
+            this.broken = false;
+            return true;
+        }
+        return false;
+    }
+    public String getInfo(){
+        return "Der "+name+" kostet nur "+price+"€ mit einer Leistung von "+watt+" Watt und dem geringen Alter von "+age+" Jahren!!!!";
+    }
     public void showInfos() {
         System.out.println("Name: " + name + " - " + "Watt: " + watt + " - " + "Age: " + age + " - " + "Price: " + price + " - " + "Broken? " + (broken? "Yes":"No"));
     }

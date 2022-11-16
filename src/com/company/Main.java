@@ -8,5 +8,6 @@ public class Main {
         DrillingMachine d3 = new DrillingMachine();
 
         d1.showInfos();
+        System.out.println(d1.getInfo());
     }
 }
